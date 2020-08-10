@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  identityServer: {
+    authority: 'http://localhost:5000',
+    clientId: 'angular_spa',
+    redirectUri: 'http://localhost:4200/auth-callback',
+    postLogoutRedirectUri: 'http://localhost:4200/',
+    responseType: 'id_token token',
+    scope: 'openid profile email api.read',
+    silentRedirectUri: 'http://localhost:4200/silent-refresh.html'
+  }
 };
 
 /*

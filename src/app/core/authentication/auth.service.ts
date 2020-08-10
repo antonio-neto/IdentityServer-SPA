@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 
 import { BaseService } from "../../shared/base.service";
 import { ConfigService } from '../../shared/config.service';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -61,15 +62,15 @@ export class AuthService extends BaseService  {
 
 export function getClientSettings(): UserManagerSettings {
   return {
-      authority: 'http://localhost:5000',
-      client_id: 'angular_spa',
-      redirect_uri: 'http://localhost:4200/auth-callback',
-      post_logout_redirect_uri: 'http://localhost:4200/',
-      response_type:"id_token token",
-      scope:"openid profile email api.read",
+      authority: environment.identityServer.authority,
+      client_id: environment.identityServer.clientId,
+      redirect_uri: environment.identityServer.redirectUri,
+      post_logout_redirect_uri: environment.identityServer.postLogoutRedirectUri,
+      response_type: environment.identityServer.responseType,
+      scope: environment.identityServer.scope,
       filterProtocolClaims: true,
       loadUserInfo: true,
       automaticSilentRenew: true,
-      silent_redirect_uri: 'http://localhost:4200/silent-refresh.html'
+      silent_redirect_uri: environment.identityServer.silentRedirectUri
   };
 }
