@@ -8,6 +8,6 @@ export const environment = {
     responseType: 'id_token token',
     scope: 'openid profile email api.read',
     silentRedirectUri: 'https://identityserverspa.z33.web.core.windows.net/silent-refresh.html',
-    resourceApiUri: 'http://identityserver-resource.azurewebsites.net'
+    resourceApiUri: 'https://identityserver-resource.azurewebsites.net'
   }
 };
