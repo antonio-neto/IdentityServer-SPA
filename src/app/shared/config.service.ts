@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
  
 @Injectable()
 export class ConfigService {
@@ -6,10 +7,10 @@ export class ConfigService {
     constructor() {}
 
     get authApiURI() {
-        return 'http://localhost:5000/api';
+        return `${environment.identityServer.authority}/api`;
     }
 
     get resourceApiURI() {
-        return 'http://localhost:5050/api';
+        return `${environment.identityServer.resourceApiUri}/api`;
     }
 }

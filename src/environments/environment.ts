@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
   identityServer: {
-    authority: 'https://identityserver-auth.azurewebsites.net',
+    authority: 'http://localhost:5000',
     clientId: 'angular_spa',
-    redirectUri: 'https://ambitious-beach-01ab44003.azurestaticapps.net/auth-callback',
-    postLogoutRedirectUri: 'https://ambitious-beach-01ab44003.azurestaticapps.net/',
+    redirectUri: 'http://localhost:4200/auth-callback',
+    postLogoutRedirectUri: 'http://localhost:4200/',
     responseType: 'id_token token',
     scope: 'openid profile email api.read',
-    silentRedirectUri: 'https://ambitious-beach-01ab44003.azurestaticapps.net/silent-refresh.html'
+    silentRedirectUri: 'http://localhost:4200/silent-refresh.html',
+    resourceApiUri: 'http://localhost:5050'
   }
 };
 

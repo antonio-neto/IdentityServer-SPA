@@ -7,6 +7,7 @@ export const environment = {
     postLogoutRedirectUri: 'https://ambitious-beach-01ab44003.azurestaticapps.net/',
     responseType: 'id_token token',
     scope: 'openid profile email api.read',
-    silentRedirectUri: 'https://ambitious-beach-01ab44003.azurestaticapps.net/silent-refresh.html'
+    silentRedirectUri: 'https://ambitious-beach-01ab44003.azurestaticapps.net/silent-refresh.html',
+    resourceApiUri: 'http://identityserver-resource.azurewebsites.net'
   }
 };
